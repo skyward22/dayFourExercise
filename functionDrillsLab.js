@@ -48,7 +48,11 @@ printName("Cameron");
   Make sure to call your function and pass in an argument.
 */
 
-const greeting = (name) => {};
+const greeting = (name) => {
+  console.log(`Hello, ${name}!`);
+};
+
+greeting("Jake");
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -61,7 +65,16 @@ const greeting = (name) => {};
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
 
-//CODE HERE
+const compareNums = (num1, num2) => {
+  if (num1 > num2) {
+    console.log(num1);
+  } else if (num2 > num1) {
+    console.log(num2);
+  } else {
+    console.log(num1);
+  }
+};
+compareNums(6, 4);
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -71,7 +84,11 @@ const greeting = (name) => {};
   Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
 */
 
-//CODE HERE
+const add = (param1, param2) => {
+  let add1 = Number(param1) + Number(param2);
+  console.log(add1);
+};
+add(10, 11);
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -86,7 +103,7 @@ const exclaim = function (str) {
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
+console.log("expression");
 
 ////////////////// PROBLEM 8 ////////////////////
 
@@ -95,11 +112,9 @@ const exclaim = function (str) {
   Uncomment the correct `console.log` underneath.
 */
 
-const exclaimTwo = (str) => {
-  return str.toUpperCase() + "!!!";
-};
+const exclaimTwo = (str) => str.toUpperCase() + "!!!";
 
-// console.log('arrow')
+console.log("arrow");
 // console.log('declaration')
 // console.log('expression')
 
@@ -122,7 +137,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+console.log("declaration");
 // console.log('expression')
 
 ////////////////// PROBLEM 10 ////////////////////
