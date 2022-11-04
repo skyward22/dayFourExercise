@@ -149,7 +149,16 @@ console.log("declaration");
   Create a variable called 'nameGreeting' and set it equal to your function invoked (called) passing in an argument.
 */
 
-//CODE HERE
+const nameCheck = (name) => {
+  if (name === "Steven") {
+    console.log("What's up Steven?");
+  } else if (name === "Bryan") {
+    console.log("Hey, Bryan");
+  } else {
+    console.log(`Cool name, ${name}`);
+  }
+};
+const nameGreeting = nameCheck("Skyler");
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -161,7 +170,18 @@ console.log("declaration");
   Create a variable called 'colorRating' and set it equal to faveColorFinder invoked (called), passing in an argument.
 */
 
-//CODE HERE
+const faveColorFinder = (color) => {
+  if (color.toLowerCase() === "red") {
+    console.log("red is a great color");
+  } else if ("green" === color.toLowerCase()) {
+    console.log("green is a solid favorite color");
+  } else if ("black" === color.toLowerCase()) {
+    console.log("Sooo trendy");
+  } else {
+    console.log("You need to re-evaluate you favorite color choice");
+  }
+};
+const colorRating = faveColorFinder("Red");
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
@@ -171,7 +191,13 @@ let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
   Call the function, passing in the `namesArr` array (above).
 */
 
-//CODE HERE
+const printAllNames = (names) => {
+  for (let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+  }
+};
+
+printAllNames(namesArr);
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -181,7 +207,14 @@ let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
   Outside the function, create a variable called `oddChecker` and set it equal to your function invoked, making sure to pass in an argument.
 */
 
-//CODE HERE
+const thatsOdd = (number) => {
+  if (number % 2 === 0) {
+    console.log("That's not odd");
+  } else {
+    console.log("That's odd indeed!");
+  }
+};
+const oddChecker = thatsOdd(3);
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -193,7 +226,9 @@ let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
     we would expect the function to return 'Sharknado is the best movie ever!'
 */
 
-//CODE HERE
+const bestMovie = (movie) => console.log(`${movie} is the best movie ever`);
+
+bestMovie("Dumb and Dumber");
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107];
