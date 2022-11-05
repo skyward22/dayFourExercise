@@ -291,7 +291,10 @@ let sampleString = "Hi, my name is Kylo.";
   Invoke the function, passing in the sampleString (above).
 */
 
-//CODE HERE
+const here = (str) => {
+  console.log(str.toUpperCase());
+};
+here(sampleString);
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -303,6 +306,16 @@ let sampleString = "Hi, my name is Kylo.";
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+const emailCheck = (email) => {
+  email = String(email).trim();
+  // console.log(email);
+  if (email.includes("@")) {
+    console.log("email verified");
+  } else {
+    console.log("must provide a valid email address");
+  }
+};
+emailCheck("emdk.fjsk@com.com ");
 
 ////////////////// PROBLEM 19 ////////////////////
 /*
@@ -310,14 +323,21 @@ let sampleString = "Hi, my name is Kylo.";
   Create a variable called `totalFrogs` and set it equal to your function invoked, passing in the amount of gold you are willing to spend.
 */
 
-//CODE HERE
-
+const buyFrog = (gold) => {
+  let frog = gold / 3;
+  console.log(frog);
+};
+const totalFrogs = buyFrog(7);
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
 */
 
-//CODE HERE
+const buyFrog2 = (gold) => {
+  let frog = gold / 3;
+  console.log(Math.floor(frog));
+};
+const totalFrogs2 = buyFrog2(7);
 
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9];
@@ -325,7 +345,17 @@ let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9];
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
 
-//CODE HERE
+const takeArray = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i + 1] > arr[i]) {
+      console.log(true);
+    } else {
+      console.log("false, array isn't ascending order");
+    }
+  }
+};
+
+const arrayIsAscending = takeArray(sampleArray);
 
 ////////////////// PROBLEM 22 ////////////////////
 
@@ -343,19 +373,31 @@ function pond() {
 }
 
 /*
-  There are 4 variables above: duck, rubberDuck, sailorDuck and realDuck.
-  All within different scopes.
-  Given the functions and variables above, edit the arrays below to contain only the appropriate variable names (as strings).
-*/
+    There are 4 variables above: duck, rubberDuck, sailorDuck and realDuck.
+    All within different scopes.
+    Given the functions and variables above, edit the arrays below to contain only the appropriate variable names (as strings).
+  */
+// let duck = "cute";
+
+// function bathroom() {
+//   let rubberDuck = "squeaky";
+//   function bathtub() {
+//     let sailorDuck = "nautical";
+//   }
+// }
+
+// function pond() {
+//   let realDuck = "fluffy";
+// }
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = [];
+let globalScope = ["duck"];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = [];
+let bathroomScope = ["duck", "rubberDuck"];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = [];
+let bathtubScope = ["duck", "sailorDuck", "rubberDuck"];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = [];
+let pondScope = ["duck", "realDuck"];
