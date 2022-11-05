@@ -241,7 +241,19 @@ let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107];
   Return the answers array inside of the function to a variable called `arrayEvaluator`.
 */
 
-//CODE HERE
+const bigOrSmall = (arr) => {
+  let answers = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      answers.push("big");
+    } else {
+      answers.push("small");
+    }
+  }
+  console.log(answers);
+};
+
+let arrayEvaluator = bigOrSmall(bigOrSmallArray);
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = [
@@ -261,7 +273,16 @@ let loser = "Glimmer";
   The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
 */
 
-//CODE HERE
+const theEliminator = (contestants, loser) => {
+  for (let i = 0; i < contestants.length; i++) {
+    if (contestants[i] === loser) {
+      contestants.splice(i, 1);
+    }
+  }
+  console.log(contestants);
+};
+
+theEliminator(contestants, loser);
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo.";
